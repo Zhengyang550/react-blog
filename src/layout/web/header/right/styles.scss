@@ -1,0 +1,46 @@
+@import '@/styles/other.scss';
+
+.headerRight {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  //垂直居中
+  align-items: center;
+
+  > * {
+    flex: none;
+    margin: 0 16px 0 0;
+  }
+
+  > *:last-child {
+    margin-right: 40px;
+  }
+
+  //文章搜索
+  .searchBox {
+    height: 22px;
+    border-left: 1px solid $dividerColor;
+    margin: 0 auto 0 0;
+    padding-left: 16px;
+    white-space: nowrap;
+    display: flex;
+
+    .searchIcon {
+      color: $searchIconColor;
+      cursor: pointer;
+      margin-top: 4px;
+      flex: none;
+    }
+
+    .searchInput {
+      flex: auto;
+      border: 0;
+      box-shadow: none;
+
+      &::placeholder {
+        color: $placeholderColor;
+      }
+    }
+  }
+}
