@@ -1,0 +1,23 @@
+@import '@/styles/other.scss';
+
+.list {
+  //标签列表
+  .badge {
+    margin: 10px 26px 0 0;
+  }
+
+  :global {
+    .ant-tag {
+      line-height: 1.4em !important;
+      margin-bottom: 5px;
+      margin-top: 5px;
+    }
+  }
+
+  .link {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 250px;
+  }
+}

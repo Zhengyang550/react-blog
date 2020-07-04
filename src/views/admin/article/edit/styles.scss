@@ -1,0 +1,58 @@
+@import '@/styles/other.scss';
+
+.article {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  //标题
+  .title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .label {
+      width: 50px;
+      font-weight: bold;
+    }
+
+    .input {
+      flex: 1;
+    }
+  }
+
+  .content {
+    position: relative;
+    //content
+    .action {
+      position: absolute;
+      bottom: 50px;
+      right: 50px;
+      z-index: 2;
+    }
+  }
+}
+
+.collapse {
+  width: 100%;
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+
+  :global {
+    .ant-tag {
+      margin-top: 5px;
+      margin-right: 20px;
+      margin-bottom: 5px;
+      max-width: 250px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  //input
+  .input {
+    width: 250px;
+  }
+}

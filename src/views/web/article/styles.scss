@@ -1,0 +1,84 @@
+@import '@/styles/other.scss';
+
+.appArticle {
+  min-height: 10vh;
+
+  //标题
+  .postHeader {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $dividerColor;
+    margin: 0px 20px;
+
+    .postTitle {
+      color: $headerTitleColor;
+      font-size: 1.7em;
+    }
+
+    .articleDesc {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .commentCount {
+      margin-left: -5px;
+      cursor: pointer;
+    }
+  }
+
+  //导航栏
+  .rightNavigation {
+    position: fixed;
+    width: 246px;
+    top: 104px;
+    right: 20px;
+
+    :global {
+      .ant-anchor {
+        padding-left: 0;
+
+        .ant-anchor-link-active::before {
+          display: block;
+          content: '';
+          height: 18px;
+          width: 2px;
+          background-color: $dividerColor;
+          position: absolute;
+          left: 0px;
+        }
+      }
+    }
+  }
+
+  //小屏
+  .drawerBtn {
+    position: fixed;
+    width: 41px;
+    height: 41px;
+    top: 30vh;
+    right: 0;
+    cursor: pointer;
+    box-shadow: 2px 0 8px $menuIconBoxShadowColor;
+    border-radius: 4px 0 0 4px;
+    text-align: center;
+    line-height: 41px;
+    z-index: 999;
+    background: #fff;
+  }
+}
+
+//必须卸载外面 因为Drawer使用的绝对定位
+.drawerNavigation {
+  margin-left: -20px;
+
+  :global {
+    .ant-anchor-ink::before {
+      content: '';
+      display: none;
+    }
+  }
+}
+

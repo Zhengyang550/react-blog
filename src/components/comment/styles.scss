@@ -1,0 +1,59 @@
+@import '@/styles/other.scss';
+
+//评论
+.comment {
+  font-family: 'Lato', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+
+  .commentHeader {
+    padding: 20px 0;
+    font-size: 16px;
+
+    .commentCount {
+      color: $homeBasicColor;
+      margin-right: 5px;
+    }
+
+    .hr {
+      margin: 10px 0 0 0;
+    }
+  }
+}
+
+//编辑器
+.editor {
+  .controls {
+    text-align: right;
+    color: #6190e8;
+
+    .controlsTipIcon {
+      margin-right: 4px;
+    }
+
+    .controlsTip {
+      margin-right: 20px;
+    }
+  }
+}
+
+//评论列表
+.commentList {
+  .iconDelete {
+    cursor: pointer;
+  }
+
+  .replyForm {
+    overflow: hidden;
+
+    .replyFormControls {
+      text-align: right;
+      padding: 10px 0;
+
+      .tip {
+        color: #c2c2c2;
+        margin-right: 8px;
+        font-size: 13px;
+      }
+    }
+  }
+
+}

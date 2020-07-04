@@ -1,7 +1,7 @@
 /**
  * @author zy
  * @date 2020/4/5
- * @Description: 事件监听器
+ * @description: 事件监听器
  * useContext Hook 是如何工作的：https://segmentfault.com/a/1190000020111320?utm_source=tag-newest
  * useEffect Hook 是如何工作的：https://segmentfault.com/a/1190000020104281
  * 微型库解读之200byte的EventEmitter - Mitt：https://segmentfault.com/a/1190000012997458?utm_source=tag-newest

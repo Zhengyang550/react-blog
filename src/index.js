@@ -10,7 +10,8 @@ import {AppContainer} from 'react-hot-loader';
 import {BusProvider} from '@/hooks/use_bus';
 import {Provider} from 'react-redux';
 import store from '@/redux';
-// import '@/styles/index.scss';
+//引入文章样式
+import '@/styles/markdown.less';
 
 ReactDOM.render(
     <AppContainer>

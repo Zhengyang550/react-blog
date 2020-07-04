@@ -1,0 +1,14 @@
+@import '@/styles/other.scss';
+
+.appTag {
+  text-align: center;
+
+  .desc {
+    line-height: 2;
+    color: #555;
+  }
+
+  .tagList {
+    padding: 20px 80px;
+  }
+}

@@ -1,7 +1,7 @@
 /**
  * @author zy
  * @date 2020/4/6
- * @Description: 利用useEffect实现组件第一次挂载
+ * @description: 利用useEffect实现组件第一次挂载
  */
 import {useEffect} from 'react'
 

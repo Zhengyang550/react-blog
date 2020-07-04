@@ -7,6 +7,7 @@
   flex-direction: row;
   //垂直居中
   align-items: center;
+  justify-content: flex-end;
 
   > * {
     flex: none;
@@ -42,5 +43,12 @@
         color: $placeholderColor;
       }
     }
+  }
+}
+
+
+@media screen and (max-width: 926px) {
+  .headerRight .searchBox {
+    display: none;
   }
 }

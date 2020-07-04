@@ -5,12 +5,18 @@
  */
 
 //头部颜色
-$headerColor: rgba(0, 0, 0, .85);
+$headerTitleColor: rgba(0, 0, 0, .85);
 $headerBoxShadowColor: #f0f1f2;
 
+//侧边导航栏颜色
+$sidebarColor: rgba(0, 0, 0, 0.65);
 
 //分割线颜色
 $dividerColor: rgb(235, 237, 240);
+
+//边框
+$borderColor: #ebedf0;
+$boderHoverBackground: #effbff;
 
 //图标颜色
 $searchIconColor: #ced4d9;
@@ -18,6 +24,16 @@ $searchIconColor: #ced4d9;
 //占位符颜色
 $placeholderColor: #a3b1bf;
 
-
 //主页颜色
 $homeBasicColor: #0cb7d5;
+$homeBackgroundColor: #fff;
+
+//列表样式
+$liHoverBackgroudColor: #eee;
+
+//链接样式
+$linkColor: #8590a6;
+$linkHoverBackground: #f0f2f5;
+
+//menu图标眼样式
+$menuIconBoxShadowColor: rgba(0, 0, 0, 0.15);

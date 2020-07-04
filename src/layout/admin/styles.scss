@@ -1,0 +1,14 @@
+@import '@/styles/other.scss';
+
+.appContainer {
+  .appHeader {
+
+  }
+
+  .appWrapper {
+    .appSideBar {
+      width: 200px;
+      background: $homeBackgroundColor;
+    }
+  }
+}

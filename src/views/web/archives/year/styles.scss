@@ -1,0 +1,28 @@
+@import '@/styles/other.scss';
+
+.appArchives {
+  padding: 40px 20px;
+  // time line
+  .timeline {
+    .desc {
+      font-weight: 600;
+    }
+
+    .year {
+      font-size: 1.6em;
+      font-weight: 600;
+      position: relative;
+      top: -4px;
+    }
+
+    .createAt {
+      font-size: 13px;
+      margin-right: 16px;
+    }
+  }
+
+  //pagination
+  .appPagination {
+    text-align: right;
+  }
+}

@@ -1,0 +1,16 @@
+@import '@/styles/other.scss';
+
+.header{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .title{   
+         font-size: 24px;
+    }
+
+    .dropdown{
+        color: white;
+    }
+}

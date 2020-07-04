@@ -1,0 +1,180 @@
+@import '@/styles/other.scss';
+
+//列表样式
+ol, ul {
+  list-style: none;
+  padding: 0;
+}
+
+.appHome {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  .appContent {
+    display: flex;
+    flex-direction: row;
+
+    .articleList {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+  }
+
+  .appPagination {
+    margin-right: 300px;
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+
+////////////////////////////////////////////////////////////////////////   文章内容
+//无数据
+.noData {
+  width: 100%;
+  margin-top: 20%;
+
+  .keyword {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f00;
+  }
+}
+
+
+//文章列表
+.articleList {
+  width: 100%;
+
+  .article {
+    border: 1px solid $borderColor;
+    padding: 16px 24px;
+    margin-bottom: 10px;
+
+    &:hover {
+      background: $boderHoverBackground;
+      box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .title {
+      color: #394d69;
+      font-size: 1.4rem;
+      font-weight: 600;
+      line-height: 1.2;
+      cursor: pointer;
+
+      &:hover {
+        color: $homeBasicColor;
+      }
+    }
+
+    .postedTime {
+      font-size: 0.5em;
+      padding-left: 20px;
+    }
+
+    .content {
+      cursor: pointer;
+      max-height: 260px;
+      overflow: hidden;
+    }
+
+    .others {
+      margin-top: 5px;
+      color: rgba(0, 0, 0, 0.45);
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+
+      a {
+        color: inherit;
+      }
+    }
+  }
+}
+
+//右侧文章列表
+.navigation {
+  //大屏
+  .preview {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: -10px;
+    width: 260px;
+    list-style-type: circle;
+
+    .title {
+      font-size: 22px;
+    }
+
+    li {
+      cursor: pointer;
+      margin: 5px 0;
+
+      a {
+        color: $linkColor;
+        display: block;
+      }
+
+      &:hover {
+        background: $linkHoverBackground;
+
+        a {
+          color: $homeBasicColor;
+        }
+      }
+
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  //小屏
+  .drawerBtn {
+    position: fixed;
+    width: 41px;
+    height: 41px;
+    top: 30vh;
+    right: 0;
+    cursor: pointer;
+    box-shadow: 2px 0 8px $menuIconBoxShadowColor;
+    border-radius: 4px 0 0 4px;
+    text-align: center;
+    line-height: 41px;
+    z-index: 999;
+    background: #fff;
+  }
+}
+
+//分页器
+.appPagination {
+
+}
+
+//多媒体查询
+@media screen and (max-width: 1300px) {
+  .appHome {
+    display: flex;
+    flex-direction: column;
+
+    .appPagination {
+      margin-right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 736px) {
+  :global {
+    .ant-divider-inner-text {
+      width: calc(100vw - 77px);
+      word-wrap: break-word;
+      white-space: normal;
+    }
+  }
+}

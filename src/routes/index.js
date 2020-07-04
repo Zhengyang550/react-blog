@@ -6,11 +6,12 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { webRouteConfig } from './web';
+import { adminRouteConfig } from './admin';
 import _ from 'lodash';
 
 
-//保存所有路由配置的数组
-const routeConfig = [webRouteConfig]
+//保存所有路由配置的数组  注意顺序 /admin在前  /在后  
+const routeConfig = [adminRouteConfig, webRouteConfig];
 
 /**
  * 路由配置
@@ -35,18 +36,22 @@ export default function () {
                 <Route
                     key={item.path}
                     path={item.path}
-                    component={() =>
-                        <div className={item.title}>
-                            {item.component && <item.component />}
-                            {item.subMenus && renderRouters(item.subMenus)}
-                        </div>
-                    }
+                    component={(props) => (
+                        <>
+                            {item.component ?
+                                <item.component {...props}>
+                                    {item.subMenus && renderRouters(item.subMenus)}
+                                </item.component>
+                                : item.subMenus && renderRouters(item.subMenus)
+                            }
+                        </>
+                    )}
                     exact={item.subMenus ? false : true}
                 />
             );
         });
 
-        return <Switch>{routes}</Switch>;
+        return <Switch> {routes}</Switch>;
     };
 
     return renderRouters(routeConfig);

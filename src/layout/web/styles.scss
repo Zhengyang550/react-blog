@@ -1,0 +1,15 @@
+@import '@/styles/other.scss';
+
+.appContainer {
+  .appHeader {
+    background: $homeBackgroundColor;
+    padding: 0;
+    box-shadow: 0 2px 8px $headerBoxShadowColor;
+  }
+
+  .appWrapper {
+    background: $homeBackgroundColor;
+    padding: 35px 0 0;
+    margin-top: 4px;
+  }
+}

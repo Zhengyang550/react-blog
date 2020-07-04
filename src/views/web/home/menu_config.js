@@ -1,5 +1,5 @@
 import {HomeOutlined} from '@ant-design/icons';
-import Home from './home';
+import Home from './index';
 
 export default {
     title: '首页',

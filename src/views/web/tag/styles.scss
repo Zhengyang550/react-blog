@@ -1,0 +1,43 @@
+@import '@/styles/other.scss';
+
+.appTag {
+  font-family: 'Lato', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  padding: 40px 20px;
+
+  // time line
+  .timeline {
+    margin-top: 5px;
+
+    .title {
+      font-size: 22px;
+      position: relative;
+      top: -5px;
+      display: flex;
+      align-items: center;
+
+      .name {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 250px;
+        display: inline-block;
+      }
+
+      .type {
+        color: #bbb;
+        margin-left: 5px;
+        text-transform: capitalize;
+      }
+    }
+
+    .createAt {
+      font-size: 13px;
+      margin-right: 16px;
+    }
+  }
+
+  //pagination
+  .appPagination {
+    text-align: right;
+  }
+}

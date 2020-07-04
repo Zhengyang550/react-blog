@@ -1,0 +1,107 @@
+@import '@/styles/other.scss';
+
+.appSidebar {
+  border-right: 1px solid $dividerColor;
+  height: calc(100vh - 64px - 40px);
+  text-align: center;
+  color: $sidebarColor;
+  overflow-y: auto;
+
+  //头像
+  .siderAvatar {
+    width: 132px;
+    height: 132px;
+  }
+
+  //标题
+  .title {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-top: 10px;
+  }
+
+  //子标题
+  .subTitle {
+    font-size: 13px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: $sidebarColor;
+  }
+
+  //个人信息
+  .homePages {
+    padding: 0;
+    width: 214px;
+    line-height: 24px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .homepageIcon {
+      width: 16px;
+      height: 16px;
+      font-size: 16px;
+    }
+
+    li {
+      padding: 0 8px;
+      cursor: pointer;
+      list-style-type: none;
+
+      a {
+        padding-left: 5px;
+        color: inherit;
+      }
+    }
+
+    li:hover {
+      border-radius: 4px;
+      background: $liHoverBackgroudColor;
+    }
+  }
+
+  //公告
+  .announcement {
+    margin: 10px 0px;
+  }
+
+  //热门文章 标题内边距
+  :global {
+    .ant-divider-inner-text {
+      padding: 0 10px !important;
+    }
+  }
+
+  //文章列表
+  .articleList {
+    text-align: left;
+
+    padding: 0px !important;
+
+    //列表
+    li {
+      padding: 0 20px;
+      list-style-type: none;
+
+      a {
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-size: 14px;
+        line-height: 32px;
+        color: $linkColor;
+        cursor: pointer;
+      }
+
+      &:hover {
+        background: $linkHoverBackground;
+
+        a {
+          color: $homeBasicColor;
+        }
+      }
+    }
+  }
+}
