@@ -1,4 +1,8 @@
 :global{
+    .ant-table-tbody .ant-table-row {
+        height: 40px;
+    }
+
     .react-resizable {
         position: relative;
         background-clip: padding-box;

@@ -21,6 +21,9 @@ const configureStore = () => {
     //创建store对象
     const store = createStore(rootReducers, storeEnhancers);
 
+    //保存store
+    window.store = store;
+
     //reducer热加载
     if (process.env.NODE_ENV !== 'production') {
         if (module.hot) {

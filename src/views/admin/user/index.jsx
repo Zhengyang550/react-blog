@@ -8,10 +8,10 @@ import useAntdTable from '@/hooks/use_antd_table';
 import {Switch, Tag, Popconfirm} from 'antd'
 import * as userService from '@/service/user';
 import CrudView from '@/components/frame/crud_view';
-import _ from 'lodash';
 import QueryForm from './query_form';
 import {DeleteOutlined} from '@ant-design/icons';
 import moment from 'moment';
+import _ from 'lodash';
 
 const User = props => {
     //将字段映射到表单

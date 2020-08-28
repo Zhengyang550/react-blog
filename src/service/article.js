@@ -10,6 +10,11 @@ export const insertArticle = article => {
     return service.post('/article/add',article);
 }
 
+//更新文章
+export const updateArticle = article => {
+    return service.post('/article/update',article);
+}
+
 //根据标签分页获取文章列表
 export const getAriticleListByTagName = params => {
     return service.get('/article/listByTagName', {params: params});
@@ -28,6 +33,16 @@ export const getArticleList = params => {
 //获取文章
 export const getArticle = articleId => {
     return service.get(`/article/${articleId}`, {params: null});
+}
+
+//删除文章
+export const deleteArticle = articleId => {
+    return service.get(`/article/delete?articleId=${articleId}`,null)
+}
+
+//批量删除文章
+export const deleteArticles = (articleIds) => {
+    return service.post(`/article/delete`,articleIds)
 }
 
 //新增文章评论

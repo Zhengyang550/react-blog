@@ -45,7 +45,7 @@ const Article = props => {
         setLoading(true);
         articleService.getArticle(articleId)
             .then(res => {
-                res.content = translateMarkdown(res.data.content)
+                res.data.content = translateMarkdown(res.data.content)
                 setArticle(res.data);
                 setLoading(false);
             }).catch(err => {

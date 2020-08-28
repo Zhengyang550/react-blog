@@ -11,9 +11,9 @@ import * as TYPES from './types';
  * @Description: 初始化文章信息
  */
 const defaultState = {
-    keyword: '',
-    tagList: [],
-    articleList: []
+    keyword: '',              //文章搜索关键字
+    tagList: [],              //所有标签
+    articleList: []           //文章列表
 }
 
 /**

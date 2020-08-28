@@ -23,7 +23,7 @@ let defaultState = {
  * @date 2020/4/12
  */
 export default function userReducer(state = defaultState, action) {
-    const {type, payload} = action
+    const {type, payload} = action;
     switch (type) {
         case TYPES.USER_LOGIN:
             authService.saveAuthInfo(payload);

@@ -94,7 +94,7 @@ function SignModal(props) {
 
     //github登录
     const handleGithubLogin = () => {
-        //打开授权授权  授权之后 会跳转到github配置的返回url页面  保存登录之前的状态，用户返回后恢复登录前的状态
+        //打开github授权  授权之后 会跳转到github配置的返回url页面  保存登录之前的状态，用户返回后恢复登录前的状态
         window.location.href = `${GITHUB.url}?client_id=${GITHUB.client_id}&state=${type}`;
         setLoading(true);
     };

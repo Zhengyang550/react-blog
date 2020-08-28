@@ -88,7 +88,7 @@ const WebComment = ({user, articleId, commentList, setCommentList, ...props}) =>
 
 WebComment.propTypes = {
     user: PropTypes.object.isRequired,           //登录用户
-    articleId: PropTypes.number.isRequired,      //文章Id
+    articleId: PropTypes.string.isRequired,      //文章Id
     commentList: PropTypes.array.isRequired,     //文章评论列表
     setCommentList: PropTypes.func.isRequired    //设置评论内容
 }

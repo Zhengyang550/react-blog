@@ -8,7 +8,7 @@ import {Menu} from 'antd';
 import {adminMenuTree} from '@/routes/admin';
 import {Link, useLocation} from 'react-router-dom';
 import _ from "lodash";
-import styles from "../../web/header/right/styles.scss";
+import styles from "./styles.scss";
 
 const {SubMenu} = Menu;
 

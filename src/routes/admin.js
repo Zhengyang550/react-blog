@@ -10,6 +10,7 @@ import menus from '@/views/admin/menu_config';
 import { getMenuTree, getMenuMap } from '@/utils';
 import { ADMIN_ROOT_PATH } from '@/config';
 import adminConfig from '@/views/admin/home/menu_config';
+import articleEditConfig from '@/views/admin/article/edit/menu_config';
 
 /**
  * admin路由配置项
@@ -32,4 +33,9 @@ export const adminRouteConfig = {
 //获取admin路由
 export const getAdminRoute = () => {
     return adminMenuMap[adminConfig.path];
+}
+
+//获取文章编辑页面路由
+export const getArticleEditRoute = id => {
+    return adminMenuMap[articleEditConfig.path].replace(/:.*$/g, id);
 }

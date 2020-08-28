@@ -1,0 +1,19 @@
+@import '@/styles/other.scss';
+
+.action{
+  user-select: none;
+  display: flex;
+  li:not(:last-child) {
+    &::after {
+      display: inline-block;
+      margin: 0 8px;
+      content: '';
+      height: 0.9em;
+      width: 1px;
+      background-color: #e8e8e8;
+      vertical-align: middle;
+      position: relative;
+      top: -0.06em;
+    }
+  }
+}
