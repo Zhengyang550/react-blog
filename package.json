@@ -174,9 +174,9 @@
     ]
   },
   "devDependencies": {
+    "http-proxy-middleware": "^1.0.5",
     "node-sass": "^4.13.1",
     "prettier": "^2.0.2",
     "sass-loader": "^8.0.2"
-  },
-  "proxy": "http://127.0.0.1:9001"
+  }
 }

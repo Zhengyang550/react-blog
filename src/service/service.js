@@ -11,7 +11,7 @@ import * as authService from './auth';
  * 自定义配置新建一个 axios 实例
  */
 const service = axios.create({
-    baseURL: '',
+    baseURL: '/blog/api',
     timeout: 10000,
     //withCredentials表示跨域请求时是否需要使用凭证
     withCredentials: false

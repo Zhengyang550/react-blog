@@ -35,15 +35,15 @@ export const removeAuthInfo = () => {
 
 //登录
 export const login = ({username, password}) => {
-    return service.get(`/login?username=${username}&password=${password}`, null);
+    return service.get(`/auth/login?username=${username}&password=${password}`, null);
 }
 
 //github登录
 export const githubLogin = code => {
-    return service.get(`/github?code=${code}`, null);
+    return service.get(`/auth/github?code=${code}`, null);
 }
 
 //登出
 export const logout = () => {
-    return service.get(`/logout`);
+    return service.get(`/auth/logout`);
 }
