@@ -7,5 +7,13 @@ import service from './service';
 
 //获取上传url
 export const getUploadUrl = () => {
-    return '/attachment/upload';
-}
+    return service.defaults.baseURL + '/attachment/upload';
+};
+
+//获取下载url
+export const getDownloadUrl = (filename) => {
+    return service.defaults.baseURL + `/attachment/download/${filename}`;
+};
+
+//文件上传
+export const uploadFile = (formData) => service.post('/attachment/upload',formData );

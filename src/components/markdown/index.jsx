@@ -1,7 +1,9 @@
 /**
  * @author zy
  * @date 2020/5/16
- * @Description:markdown编辑器  https://github.com/ilibs/react-simplemde-editor
+ * @Description:markdown编辑器
+ * https://github.com/ilibs/react-simplemde-editor
+ * https://learnku.com/articles/17320
  */
 import React from 'react';
 import loadScript from '@/components/import_script';

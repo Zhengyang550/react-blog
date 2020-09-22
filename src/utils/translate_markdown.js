@@ -20,8 +20,8 @@ const translateMarkdown = (plainText, isGuardXss = false) => {
         smartLists: true,
         smartypants: true,
         highlight: function (code) {
-            /*eslint no-undef: "off"*/
-            return hljs.highlightAuto(code).value
+            // 在index.html导入了代码高亮的js文件
+            return window.hljs.highlightAuto(code).value
         }
     })
 }

@@ -11,7 +11,7 @@ import * as authService from './auth';
  * 自定义配置新建一个 axios 实例
  */
 const service = axios.create({
-    baseURL: '/blog/api',
+    baseURL: '/api/blog',
     timeout: 10000,
     //withCredentials表示跨域请求时是否需要使用凭证
     withCredentials: false
@@ -26,13 +26,14 @@ service.interceptors.request.use(
         if (token) {
             config.headers['Authorization'] = token;
         }
+
         //文件传输
         if (config.data instanceof FormData) {
             config.headers['Content-Type'] = 'multipart/form-data';
         }
 
         //json
-        if (config.data instanceof Object) {
+        else if (config.data instanceof Object) {
             config.headers['Content-Type'] = 'application/json';
             config.data = JSON.stringify(config.data);
         }

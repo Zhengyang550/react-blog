@@ -5,7 +5,6 @@
  * 不懂原理的可以参考：https://github.com/brickspert/blog/issues/22#middleware
  */
 import thunk from 'redux-thunk';
-//applyMiddleware用来合并多个中间件，逗号隔开
 import {createStore, applyMiddleware} from 'redux';
 import rootReducers from './root_reducers';
 //redux的可视化工具，谷歌的应用商城工具

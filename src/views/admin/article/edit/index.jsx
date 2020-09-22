@@ -48,7 +48,6 @@ const Edit = props => {
             tags[0] && setSelectedTagList([tags[0]])
         } else {
             articleService.getArticle(articleId).then(res => {
-                console.log('查询结果', res);
                 setTitle(res.data.title)
                 setContent(res.data.content)
                 const tags = _.map(res.data.tags, tag => tag.name);
