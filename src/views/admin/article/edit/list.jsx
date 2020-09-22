@@ -1,7 +1,7 @@
 /**
  * @author zy
  * @date 2020/5/16
- * @Description: 文章标签、分类
+ * @Description: 文章标签
  */
 import React, {useState} from 'react';
 import {Tag, Tooltip, Input} from 'antd';
@@ -62,7 +62,7 @@ const List = props => {
             >
                 {item}
             </CheckableTag>
-        )
+        );
 
         return (
             <Tooltip key={item} title={item}>

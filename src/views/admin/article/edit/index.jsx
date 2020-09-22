@@ -37,10 +37,10 @@ const Edit = props => {
     //如果是编辑 获取编辑的文章id
     const articleId = props.match.params.id ? parseInt(props.match.params.id) : null;
 
-    //如果是新增试着标签标签
     useEffect(() => {
-        //对特长字符进行裁剪
+        //获取标签名称
         const tags = _.map(store.tagList, tag => tag.name);
+
         setTagList(tags);
         //新增
         if (!articleId) {

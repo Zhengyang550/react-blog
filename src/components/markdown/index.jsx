@@ -1,31 +1,22 @@
 /**
  * @author zy
  * @date 2020/5/16
- * @Description:markdown编辑器
+ * @Description:markdown编辑器  https://github.com/ilibs/react-simplemde-editor
  */
 import React from 'react';
-import PropTypes from 'prop-types';
-import SimpleMDE from 'react-simplemde-editor';
+import loadScript from '@/components/import_script';
 import 'easymde/dist/easymde.min.css';
 
-import {translateMarkdown} from '@/utils';
+//引入inlineAttachment
+const SimpleMDE = loadScript([
+    '//cdnjs.cloudflare.com/ajax/libs/codemirror/4.0.3/codemirror.js',
+    process.env.PUBLIC_URL + '/inline_attachment/inline-attachment.js',
+    process.env.PUBLIC_URL + '/inline_attachment/codemirror-4.inline-attachment.js',
+], () => import('./md_editor.jsx'));
 
-const MdEditor = props => {
-    return (
-        <SimpleMDE
-            value={props.value}
-            onChange={props.onChange}
-            options={{
-                autofocus: true,
-                previewRender: translateMarkdown
-            }}
-        />
-    )
+
+const Component = (props) => {
+    return <SimpleMDE {...props}/>
 };
 
-MdEditor.prototype = {
-    value: PropTypes.string.isRequired,
-    onChange: PropTypes.func.isRequired
-};
-
-export default MdEditor;
+export default Component;
