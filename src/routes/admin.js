@@ -17,7 +17,6 @@ import articleEditConfig from '@/views/admin/article/edit/menu_config';
  * @author zy
  * @date 2020/5/7
  */
-
 //admin 菜单配置
 export const adminMenuTree = getMenuTree(menus, ADMIN_ROOT_PATH);
 export const adminMenuMap = getMenuMap(menus, ADMIN_ROOT_PATH);

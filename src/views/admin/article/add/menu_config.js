@@ -5,5 +5,6 @@ export default {
     title: '新增',
     icon: EditOutlined,
     path: 'add',
-    component: Edit
+    component: Edit,
+    auth:true
 }

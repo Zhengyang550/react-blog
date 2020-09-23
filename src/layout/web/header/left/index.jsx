@@ -12,7 +12,7 @@ const WebHeaderLeft = props => {
 
     return (
         <div className={styles.headerLeft}>
-            <a className={styles.blogIcon}>
+            <a href='' className={styles.blogIcon}>
                 <DingdingOutlined/>
                 <div>{HEADER_BLOG_NAME}</div>
             </a>

@@ -5,5 +5,6 @@ export default {
     title: '管理',
     icon: FolderOutlined,
     path: 'manager',
-    component: Manager
+    component: Manager,
+    auth:true
 }

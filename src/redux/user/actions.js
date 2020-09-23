@@ -23,6 +23,7 @@ export const login = params => {
                     payload: res.data
                 });
                 message.success(`登录成功, 欢迎您 ${res.data.username}`, 2);
+                refresh();
                 resolve(res.data);
             }).catch(err => {
                 reject(err);
@@ -45,6 +46,7 @@ export const githubLogin = code => {
                     payload: res.data
                 });
                 message.success(`登录成功, 欢迎您 ${res.data.username}`, 2);
+                refresh();
                 resolve(res.data);
             }).catch(err => {
                 reject(err);
@@ -96,5 +98,17 @@ export const loginout = () => {
             type: TYPES.USER_LOGIN_OUT
         });
         message.success('退出成功!', 2);
+        refresh();
     }
+}
+
+/**
+ * 刷新当前页面
+ * @author zy
+ * @date 2020/9/23
+ */
+const refresh = () => {
+    setTimeout(()=>{
+        window.location.reload();
+    },500);
 }

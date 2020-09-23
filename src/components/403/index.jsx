@@ -1,27 +1,32 @@
 /**
  * @author zy
  * @date 2020/4/5
- * @Description: 找不到页面
+ * @Description: 用户无权限
  */
 import React from 'react';
 import {Result, Button} from 'antd';
+import {useHistory} from 'react-router-dom';
+
 
 /**
- * 页面找不到组件
+ * 用户无权限
  * @author zy
  * @date 2020/4/5
  */
-const PageNotFound = props => {
+const PageNotPermit = () => {
+    //获取history
+    const history = useHistory();
+
     return (
         <Result
-            status='404'
-            title='404'
-            subTitle='Sorry, the page you visited does not exist.'
+            status='403'
+            title='403'
+            subTitle='Sorry, the page you visited does not permit.'
             extra={
                 <Button
                     type='primary'
                     onClick={() => {
-                        props.history.push('/')
+                        history.push('/')
                     }}>
                     Back Home
                 </Button>
@@ -30,4 +35,4 @@ const PageNotFound = props => {
     )
 }
 
-export default PageNotFound;
+export default PageNotPermit;

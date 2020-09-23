@@ -7,5 +7,5 @@ export default {
     title: '文章管理',
     icon: BookOutlined,
     path: 'article',
-    subMenus: [Manager,Edit,Add]
+    subMenus: [Manager,Edit,Add],
 }

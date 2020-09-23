@@ -1,5 +1,3 @@
-import { getToken } from '@/service/auth'
-
 /**
  * 文件下载
  * @author zy
@@ -7,7 +5,6 @@ import { getToken } from '@/service/auth'
  */
 export default function download(url) {
   const $a = document.createElement('a')
-  const token = getToken()
   $a.href =  url;
   document.body.appendChild($a)
   $a.click();

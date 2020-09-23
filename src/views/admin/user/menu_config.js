@@ -5,5 +5,6 @@ export default {
     title: '用户管理',
     icon: UserOutlined,
     path: 'user',
-    component: User
+    component: User,
+    auth:true
 }

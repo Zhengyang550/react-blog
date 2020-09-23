@@ -7,4 +7,5 @@ export default {
     path: 'edit/:id',
     component: Edit,
     invisible:true,
+    auth:true
 }

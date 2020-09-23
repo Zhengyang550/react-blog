@@ -8,6 +8,7 @@ import { Switch, Route } from 'react-router-dom';
 import { webRouteConfig } from './web';
 import { adminRouteConfig } from './admin';
 import _ from 'lodash';
+import Auth from '@/components/auth';
 
 
 //保存所有路由配置的数组  注意顺序 /admin在前  /在后  
@@ -19,7 +20,6 @@ const routeConfig = [adminRouteConfig, webRouteConfig];
  * @date 2020/4/5
  */
 export default function () {
-
     /**
      * 生成路由嵌套结构
      * @author: zy
@@ -31,6 +31,10 @@ export default function () {
 
         //遍历每一个路由项
         _.forEach(routeConfig, item => {
+            //判断路由是否需要授权
+            if(item.auth){
+                item.component = Auth(item.component);
+            }
             //这里使用了嵌套路由
             routes.push(
                 <Route

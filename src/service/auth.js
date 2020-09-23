@@ -12,7 +12,7 @@ export const getAuthInfo = () => {
     return cookie.load('auth_info');;
 }
 
-//获取登录用户信token信息
+//获取登录用户token信息
 export const getToken = () => {
     const user = getAuthInfo();
     if(user){
@@ -29,8 +29,7 @@ export const saveAuthInfo = user => {
 
 //移除登录用户信息
 export const removeAuthInfo = () => {
-    // eslint-disable-next-line no-undef
-    cookie.remove('auth_info');
+    cookie.save('auth_info',{})
 }
 
 //登录

@@ -5,5 +5,6 @@ export default {
     title: '首页',
     icon: HomeOutlined,
     path: '',
-    component: Home
+    component: Home,
+    auth:true
 }

@@ -139,7 +139,7 @@ const Manager = props => {
                                 }}>编辑</Link>
                             </li>
                             <li>
-                                <a onClick={e => downloadArticle(articleId)}>导出</a>
+                                <a href='' onClick={e => downloadArticle(articleId)}>导出</a>
                             </li>
                             <li>
                                 <Popconfirm title='Are you sure？' cancelText='No'

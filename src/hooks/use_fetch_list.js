@@ -49,8 +49,6 @@ export default function useFetchList({
             ...params,
         };
 
-        console.log('请求参数',params,requestParams);
-
         withLoading && setLoading(true);
 
         //调用后端接口 获取数据
