@@ -49,8 +49,10 @@ const MdEditor = props => {
 
     //第一次加载
     useMount(() => {
+        let codemirror = mdeInstance.current.simpleMde.codemirror;
+
         // 在已有的 SimpleMDE 对象的基础上再增加图片拖拽
-        inlineAttachment.editors.codemirror4.attach(mdeInstance.current.simpleMde.codemirror, inlineAttachmentConfig);
+        inlineAttachment.editors.codemirror4.attach(codemirror, inlineAttachmentConfig);
 
         console.log(mdeInstance.current);
         //监听文件change事件
@@ -66,8 +68,15 @@ const MdEditor = props => {
             }
             formData.append("file", files[0]);
             uploadService.uploadFile(formData).then((res)=> {
-                // //获取文件名称
-                let newValue = `![](/file/${uploadService.getDownloadUrl(res.data)})`;
+                // 获取文件名称
+                let newValue = `![file](${uploadService.getDownloadUrl(res.data)})`;
+                //在当前光标插入 链接
+                codemirror.replaceSelection(newValue);
+            }).catch(err => {
+                codemirror.replaceSelection('Error uploading file');
+            }).finally(()=>{
+                //清空  才可以再次传入相同文件
+                uploadInput.current.value = '';
             })
         })
     });
@@ -85,13 +94,13 @@ const MdEditor = props => {
                 options={{
                     autofocus: true,
                     spellChecker: false,
+                    maxHeight:'calc(100vh - 450px)',
                     autosave: {
                         enabled: true,
                         uniqueId: "demo",  //必须设置
                         delay: 10000,      //时间间隔默认 10s
                     },
                     previewRender: translateMarkdown,      // 自定义预览渲染
-                    inputStyle: 'contenteditable',
                     toolbar: [
                         'bold',
                         'italic',

@@ -4,7 +4,7 @@
  * @Description: 查询信息
  */
 import React from 'react';
-import {Form, Input, Select, Button, DatePicker} from 'antd';
+import {Form, Input, Select, Button} from 'antd';
 import _ from 'lodash';
 
 const {useForm} = Form;
