@@ -7,7 +7,7 @@
  */
 import React from 'react';
 import loadScript from '@/components/import_script';
-import 'easymde/dist/easymde.min.css';
+
 
 //引入inlineAttachment
 const SimpleMDE = loadScript([
@@ -17,7 +17,7 @@ const SimpleMDE = loadScript([
 ], () => import('./md_editor.jsx'));
 
 
-const Component = (props) => {
+const Component = props => {
     return <SimpleMDE {...props}/>
 };
 

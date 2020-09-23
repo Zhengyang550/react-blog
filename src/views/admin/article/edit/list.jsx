@@ -25,7 +25,7 @@ const List = props => {
     const [inputValue, setInputValue] = useState('');
 
     //输入框引用
-    let inputRef = null
+    let inputRef = null;
 
     //点击选中事件
     const handleSelect = (value, checked) => {

@@ -1,5 +1,6 @@
 import React, {useRef} from "react";
 import SimpleMDE from "react-simplemde-editor";
+import 'easymde/dist/easymde.min.css';
 import PropTypes from "prop-types";
 import {translateMarkdown} from '@/utils';
 import useMount from '@/hooks/use_mount';
@@ -28,7 +29,6 @@ const MdEditor = props => {
         },
         //重写 请求返回状态吗200时的回调函数  注意这里不可以写成lamda表达式，不然会丢失this
         onFileUploadResponse: function (xhr) {
-            console.log(xhr,this);
             //获取响应信息
             let result = JSON.parse(xhr.responseText);
             //获取文件名称
@@ -54,7 +54,6 @@ const MdEditor = props => {
         // 在已有的 SimpleMDE 对象的基础上再增加图片拖拽
         inlineAttachment.editors.codemirror4.attach(codemirror, inlineAttachmentConfig);
 
-        console.log(mdeInstance.current);
         //监听文件change事件
         uploadInput.current.addEventListener("change", () => {
             let formData = new FormData();
@@ -96,9 +95,9 @@ const MdEditor = props => {
                     spellChecker: false,
                     maxHeight:'calc(100vh - 450px)',
                     autosave: {
-                        enabled: true,
-                        uniqueId: "demo",  //必须设置
-                        delay: 10000,      //时间间隔默认 10s
+                        enabled: props.value,    //只有有内容时才开启自动保存
+                        uniqueId: "demo",        //必须设置
+                        delay: 10000,            //时间间隔默认 10s
                     },
                     previewRender: translateMarkdown,      // 自定义预览渲染
                     toolbar: [

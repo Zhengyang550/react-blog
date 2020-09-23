@@ -45,7 +45,7 @@ const Edit = props => {
         //新增
         if (!articleId) {
             //默认选中第一个
-            tags[0] && setSelectedTagList([tags[0]])
+            tags[0] && setSelectedTagList([tags[0]]);
         } else {
             articleService.getArticle(articleId).then(res => {
                 setTitle(res.data.title)
