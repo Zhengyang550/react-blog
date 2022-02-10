@@ -178,7 +178,7 @@
   },
   "devDependencies": {
     "http-proxy-middleware": "^1.0.5",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "prettier": "^2.0.2",
     "sass-loader": "^8.0.2"
   }
